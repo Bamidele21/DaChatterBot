@@ -1,7 +1,7 @@
 import os 
 from dotenv import load_dotenv
 load_dotenv()
-import openai
+
 import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
@@ -41,4 +41,5 @@ if user_input:
     response = generate_answer(user_input, llm, temperature, max_tokens)
     st.write(response)
 else:
+
     st.write("Please enter a question to get an answer.")
