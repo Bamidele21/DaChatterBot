@@ -32,7 +32,7 @@ llm = st.sidebar.selectbox("choose your LLM",["gemma2-9b-it", "llama3.1-8b-insta
 
 temperature = st.sidebar.number_input("Temperature", min_value=0.0, max_value=1.0, value=0.7)
 
-max_tokens = st.sidebar.number_input("Max Tokens", min_value=1, max_value=200, value=100)
+max_tokens = st.sidebar.number_input("Max Tokens", min_value=1, max_value=500, value=100)
 
 st.write("Ask a question:")
 user_input = st.text_input("question")
@@ -43,3 +43,4 @@ if user_input:
 else:
 
     st.write("Please enter a question to get an answer.")
+
