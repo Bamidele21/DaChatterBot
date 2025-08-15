@@ -28,7 +28,7 @@ def generate_answer(question, llm, temperature, max_tokens):
     return answer
 
 st.title("Q&A Chatbot with Groq")
-llm = st.sidebar.selectbox("choose your LLM",["gemma2-9b-it", "llama3.1-8b-instant"])
+llm = st.sidebar.selectbox("choose your LLM",["gemma2-9b-it", "llama-3.1-8b-instant"])
 
 temperature = st.sidebar.number_input("Temperature", min_value=0.0, max_value=1.0, value=0.7)
 
@@ -43,4 +43,5 @@ if user_input:
 else:
 
     st.write("Please enter a question to get an answer.")
+
 
